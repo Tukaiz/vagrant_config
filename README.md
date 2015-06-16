@@ -21,7 +21,14 @@ After running these commands, just head over to a project with its `Vagrantfile`
     vagrant up
 to start the VM. Your project and all local changes are shared on the VM's `/vagrant` folder, from where the VM Rails runs. I've configured the port forwarding to 8080 on `localhost` to avoid conflicts with other running rails apps, but you can change it to whatever  you want on the `Vagrantfile`.
 
-If you want to create your own [provisioning for the VM](https://docs.vagrantup.com/v2/provisioning/index.html), you can now `bundle install` to get the [knife-solo](https://matschaffer.github.io/knife-solo/) gem used to generate Chef provisioning recipes. The recipes included here will be for a Rails install. 
+Currently the provisioning is done from a shell file. It does the following:
+
+- basics (curl, git, mysql)
+- RVM and Ruby 2.2.0
+- Bundler, Rails 4.2.1
+- Redis (latest stable)
+
+If you want to create your own [provisioning for the VM](https://docs.vagrantup.com/v2/provisioning/index.html), there are a number of ways - Chef, Puppet, and Docker to name a few.
 
 `vagrant up` starts the vagrant VM.
 you may have to do this a couple of times while dependencies etc get installed.
