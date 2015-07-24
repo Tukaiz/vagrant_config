@@ -4,13 +4,14 @@ echo "updating apt-get"
 sudo apt-get update > /dev/null 2>&1
 
 # echo "Installing essentials"
-sudo apt-get install -y curl git build-essential python-software-properties nodejs ruby-dev qt5-default libqt5webkit5-dev  1> /dev/null
+sudo apt-get install -y curl git build-essential python-software-properties ruby-dev firefox 1> /dev/null
 
 # configure mysql-server with root account if you need it
 echo -e "\n--- Install MySQL specific packages and settings ---\n"
 echo "mysql-server mysql-server/root_password password $DBPASSWD" | debconf-set-selections
 echo "mysql-server mysql-server/root_password_again password $DBPASSWD" | debconf-set-selections
-apt-get -y install mysql-server-5.5
+sudo apt-get -y install mysql-server-5.5 libmysqlclient-dev
+wget -qO- https://get.docker.com/ | sh
 
 #############
 # RVM/ruby setup
