@@ -4,7 +4,7 @@ echo "updating apt-get"
 sudo apt-get update > /dev/null 2>&1
 
 # echo "Installing essentials"
-sudo apt-get install -y curl git build-essential python-software-properties ruby-dev firefox 1> /dev/null
+sudo apt-get install -y curl git build-essential python-software-properties ruby-dev qt5-default libqt5webkit5-dev 1> /dev/null
 
 # configure mysql-server with root account if you need it
 echo -e "\n--- Install MySQL specific packages and settings ---\n"
