@@ -34,3 +34,7 @@ If you want to create your own [provisioning for the VM](https://docs.vagrantup.
 you may have to do this a couple of times while dependencies etc get installed.
 
 `vagrant ssh` logs you into the VM.
+
+### Projects
+
+Each project varies wildly in its requirements - please keep each project in its own folder. 
