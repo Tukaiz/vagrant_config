@@ -38,3 +38,8 @@ you may have to do this a couple of times while dependencies etc get installed.
 There are certain projects that have been pre-provisioned due to difficutlies in their setup or the sheer age of the gems involved. Below are the list of boxes that have been pre-provisioned and do **not** need to be provisioned again. Look up documentation in Confluence for setup in each given project: 
 
 - Elibrary
+=======
+### Projects
+
+Each project varies wildly in its requirements - please keep each project in its own folder. 
+
